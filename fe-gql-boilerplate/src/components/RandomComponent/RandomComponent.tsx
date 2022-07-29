@@ -1,12 +1,12 @@
 import React from 'react'
-import logo from '../../assets/svg/logo.svg'
+import { ReactComponent as Logo } from '../../assets/svg/logo.svg'
 import './RandomComponent.css'
 
 function RandomComponent() {
   return (
     <div className='RandomComponent'>
       <header className='RandomComponent-header'>
-        <img src={logo} className='App-logo' alt='logo' />
+        <Logo className='App-logo' />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
