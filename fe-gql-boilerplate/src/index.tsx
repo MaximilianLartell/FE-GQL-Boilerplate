@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom/client'
 import { App } from './components/App'
 import reportWebVitals from './reportWebVitals'
 import { Normalize } from 'styled-normalize'
+import { ApolloProvider } from '@apollo/client'
+import client from './apolloConfig'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <Normalize />
-    <App />
+    <ApolloProvider client={client}>
+      <Normalize />
+      <App />
+    </ApolloProvider>
   </React.StrictMode>,
 )
 

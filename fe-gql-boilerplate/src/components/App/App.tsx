@@ -1,6 +1,6 @@
 import React from 'react'
-// import logo from './logo.svg'
 import logo from '../../assets/svg/logo.svg'
+import { RandomComponent } from '../RandomComponent'
 import './App.css'
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <RandomComponent />
     </div>
   )
 }
