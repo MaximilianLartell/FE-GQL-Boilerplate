@@ -1,7 +1,9 @@
 import React from 'react'
 import logo from '../../assets/svg/logo.svg'
-import { RandomComponent } from '../RandomComponent'
+import { Box, NavLink } from '@mantine/core'
+import { Link } from 'react-router-dom'
 import './App.css'
+import RenderRoutes from '../../routes/routes'
 
 function App() {
   return (
@@ -20,7 +22,15 @@ function App() {
           Learn React
         </a>
       </header>
-      <RandomComponent />
+      <Box sx={{ width: 240 }}>
+        <Link to='/'>
+          <NavLink label='Home' />
+        </Link>
+        <Link to='/randomcomponent'>
+          <NavLink label='Random' />
+        </Link>
+      </Box>
+      <RenderRoutes />
     </div>
   )
 }

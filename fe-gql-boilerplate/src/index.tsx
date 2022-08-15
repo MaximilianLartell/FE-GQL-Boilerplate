@@ -5,13 +5,16 @@ import reportWebVitals from './reportWebVitals'
 import { Normalize } from 'styled-normalize'
 import { ApolloProvider } from '@apollo/client'
 import client from './apolloConfig'
+import { BrowserRouter } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <Normalize />
-      <App />
+      <BrowserRouter>
+        <Normalize />
+        <App />
+      </BrowserRouter>
     </ApolloProvider>
   </React.StrictMode>,
 )
